@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブロック崩しゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- タイトル画面 -->
+  <div id="title-screen" class="screen">
+    <h1>ブロック崩しゲーム</h1>
+    <p>難易度を選択してください</p>
+    <button class="difficulty" data-difficulty="easy">易しい</button>
+    <button class="difficulty" data-difficulty="normal">普通</button>
+    <button class="difficulty" data-difficulty="hard">難しい</button>
+  </div>
+
+  <!-- ゲーム画面 -->
+  <div id="game-screen" class="screen hidden">
+    <canvas id="game-canvas"></canvas>
+    <div id="game-info">
+      <p>得点: <span id="score">0</span></p>
+      <p>ライフ: <span id="lives">3</span></p>
+    </div>
+  </div>
+
+  <!-- 結果画面 -->
+  <div id="result-screen" class="screen hidden">
+    <h1>結果発表</h1>
+    <p>あなたの得点: <span id="final-score">0</span></p>
+    <button id="restart-button">もう一度プレイ</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
